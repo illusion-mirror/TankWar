@@ -1,0 +1,18 @@
+//import jdk.internal.agent.resources.agent;
+
+public class person {
+	int age;
+	int id;
+	person(int _age,int _id){
+		age = _age;
+		id = _id;
+				
+	}
+	public get
+//
+	
+	public static void main(String[] args) {
+		
+	}
+
+}
