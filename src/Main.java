@@ -6,11 +6,12 @@ public class Main {
     public  static void main(String args[]) throws InterruptedException {
 //        Frame f = new Frame("Tank Frame");
 //        f.setVisible(true);
-        TankFrame tf = new TankFrame();
-        tf.setVisible(true);
+        //TankFrame tf = new TankFrame();
+
+        TankFrame.INSTANCE.setVisible(true);
         for(;;){
             Thread.sleep(10);
-            tf.repaint();
+            TankFrame.INSTANCE.repaint();
 
         }
 
