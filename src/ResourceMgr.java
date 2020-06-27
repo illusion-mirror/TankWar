@@ -26,8 +26,8 @@ public class ResourceMgr {
             bulletR = ImageUtils.rotateImage(bulletU, 90);
             bulletD = ImageUtils.rotateImage(bulletU, 180);
 
-            for(int i=0; i<16; i++)
-                explodes[i] = ImageIO.read(ResourceMgr.class.getClassLoader().getResourceAsStream("images/e" + (i+1) + ".gif"));
+            for(int i=1; i<16; i++)
+                explodes[i-1] = ImageIO.read(ResourceMgr.class.getClassLoader().getResourceAsStream("images/e" + (i) + ".gif"));
         } catch (IOException e) {
             e.printStackTrace();
         }

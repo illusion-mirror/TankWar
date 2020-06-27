@@ -46,6 +46,7 @@ public class Tank {
         move();
         if (collisionWithBullet()){
            destoryThis();
+           TankFrame.INSTANCE.add(new Explode(x,y));
         }
         randomChangeDir();
         randomFire();

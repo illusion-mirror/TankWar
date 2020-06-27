@@ -15,6 +15,7 @@ public class TankFrame extends Frame{
     private Player tank;
     private List<Bullet> bulletsList;
     private List<Tank> enemys;
+    private List<Explode> explodes;
 
     private TankFrame(){
 
@@ -37,10 +38,15 @@ public class TankFrame extends Frame{
     private void initGameObject() {
         tank = new Player(150,100,Dir.U,Group.GoodTank);
         enemys = new ArrayList<>();
+        explodes = new ArrayList<>();
         this.bulletsList = new ArrayList<>();
         for(int i= 0; i < 10; i++){
             enemys.add(new Tank(100,100,Dir.L,Group.BadTank));
         }
+    }
+
+    public List<Explode> getExplodes() {
+        return explodes;
     }
 
     public List<Bullet> getBulletList(){
@@ -69,6 +75,9 @@ public class TankFrame extends Frame{
         for(int i = 0; i< enemys.size(); i++){
             enemys.get(i).paint(g);
         }
+        for(int i = 0; i< explodes.size(); i++){
+            explodes.get(i).paint(g);
+        }
     }
 
     @Override
@@ -94,6 +103,11 @@ public class TankFrame extends Frame{
             }
         }
     }
+
+    public void add(Explode explode) {
+        this.explodes.add(explode);
+    }
+
 
     private class TankListener extends KeyAdapter {
         @Override
