@@ -1,0 +1,9 @@
+#key-value pair
+#xml yaml
+initTankCount=0
+gameWidth=800
+gameHeight=600
+
+#tank fire strategy
+tankFireStrategy=DoubleFireStrategy
+colliders=BulletTankCollider,BulletWallCollider,TankWallCollider,TankTankCollider
